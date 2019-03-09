@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-oe-zfS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Setting" id="Avl-nd-mld">
+                                        <connections>
+                                            <segue destination="eZD-1C-5Qp" kind="show" id="gGC-Ps-x6m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R2X-VT-gm6">
+                                <rect key="frame" x="133" y="289" width="109" height="89"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waP-EG-cfb">
+                                        <rect key="frame" x="4" y="0.0" width="101" height="29.5"/>
+                                        <state key="normal" title="Doggie Ranker"/>
+                                        <connections>
+                                            <segue destination="Cur-Cm-9wa" kind="show" id="nhS-9r-skl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
+                                        <rect key="frame" x="0.5" y="29.5" width="108" height="30"/>
+                                        <state key="normal" title="Guessing Game"/>
+                                        <connections>
+                                            <segue destination="BqY-nX-fsJ" kind="show" id="aft-XP-AYE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
+                                        <rect key="frame" x="8" y="59.5" width="93" height="29.5"/>
+                                        <state key="normal" title="Submit Photo"/>
+                                        <connections>
+                                            <segue destination="AYs-OA-f8x" kind="show" id="B09-dZ-HUS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eJB-oe-zfS" secondAttribute="trailing" id="9qQ-f7-hII"/>
+                            <constraint firstItem="R2X-VT-gm6" firstAttribute="centerX" secondItem="eJB-oe-zfS" secondAttribute="centerX" id="EeL-vE-r9s"/>
+                            <constraint firstItem="R2X-VT-gm6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="N3g-nK-G5n"/>
+                            <constraint firstItem="eJB-oe-zfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QcD-Hu-uHp"/>
+                            <constraint firstItem="R2X-VT-gm6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XS8-pE-SWO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R2X-VT-gm6" secondAttribute="bottom" constant="289" id="m2r-tf-bht"/>
+                            <constraint firstItem="eJB-oe-zfS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mDP-an-NbL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0M4-2g-DOs">
+            <objects>
+                <viewController id="Cur-Cm-9wa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ncy-wC-r3m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tHy-wc-Hb2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9y-qc-AlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tye-yZ-hAY">
+            <objects>
+                <viewController id="BqY-nX-fsJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjq-gE-Gif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="epK-Rq-qxa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMO-xS-ivQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="987"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ehm-jq-o5D">
+            <objects>
+                <viewController id="2m4-xi-DxM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vVw-PW-qaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="koo-nF-rUa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ky7-hR-GfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2639" y="986"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OvJ-Nk-sbj">
+            <objects>
+                <viewController id="eZD-1C-5Qp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cl-gS-K7V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lIX-PY-yhb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbh-p1-ORi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2274" y="123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9V8-ae-V4O">
+            <objects>
+                <viewController id="AYs-OA-f8x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MI6-61-cuH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wz9-jO-2ou"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llY-Ku-59n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3465" y="123"/>
+        </scene>
+    </scenes>
+</document>
