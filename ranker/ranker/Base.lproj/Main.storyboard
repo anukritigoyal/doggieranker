@@ -200,13 +200,10 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
         <image name="beagle" width="860" height="460"/>
         <image name="dog" width="2880" height="3840"/>
-=======
         <image name="game" width="75" height="75"/>
         <image name="rank" width="75" height="75"/>
         <image name="submit" width="75" height="75"/>
->>>>>>> master
     </resources>
 </document>
