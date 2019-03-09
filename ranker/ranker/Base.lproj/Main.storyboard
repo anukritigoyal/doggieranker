@@ -18,61 +18,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82s-tO-qn5">
-                                <rect key="frame" x="112" y="181" width="176" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tVL-Oj-vib">
+                                <rect key="frame" x="88" y="289" width="199" height="37"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="37"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
+                                        <rect key="frame" x="84" y="0.0" width="115" height="37"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <state key="normal" title="Guessing Game">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BqY-nX-fsJ" kind="show" id="aft-XP-AYE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="uXc-9i-ZOR">
+                                <rect key="frame" x="88" y="185" width="199" height="37"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waP-EG-cfb">
-                                        <rect key="frame" x="75" y="0.0" width="101" height="75"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Doggie Ranker"/>
+                                        <rect key="frame" x="85" y="0.0" width="114" height="37"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <state key="normal" title="Doggie Ranker">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Doggie Ranker">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="17" name="Avenir-Book"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Cur-Cm-9wa" kind="show" id="nhS-9r-skl"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-WE-SRH">
-                                <rect key="frame" x="116" y="364" width="168" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPy-sq-Fyh">
+                                <rect key="frame" x="335" y="627" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6sc-yK-BlY"/>
+                                    <constraint firstAttribute="width" constant="20" id="fxA-ut-IHX"/>
+                                </constraints>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <segue destination="2m4-xi-DxM" kind="show" id="nJ0-Ko-uF5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-uy-ODe">
+                                <rect key="frame" x="53" y="20" width="268" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="sNy-ku-BZe">
+                                <rect key="frame" x="92" y="387" width="199" height="37"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="submit" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-xt-F9v">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
-                                        <rect key="frame" x="75" y="0.0" width="93" height="75"/>
-                                        <state key="normal" title="Submit Photo"/>
+                                        <rect key="frame" x="92" y="0.0" width="107" height="37"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <state key="normal" title="Submit Photo">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="AYs-OA-f8x" kind="show" id="B09-dZ-HUS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-oe-zfS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Settings" id="Avl-nd-mld">
-                                        <connections>
-                                            <segue destination="eZD-1C-5Qp" kind="show" id="gGC-Ps-x6m"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5M-oD-R8A">
-                                <rect key="frame" x="108" y="272" width="183" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
-                                        <rect key="frame" x="75" y="0.0" width="108" height="75"/>
-                                        <state key="normal" title="Guessing Game"/>
-                                        <connections>
-                                            <segue destination="BqY-nX-fsJ" kind="show" id="aft-XP-AYE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -80,12 +101,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="eJB-oe-zfS" secondAttribute="trailing" id="9qQ-f7-hII"/>
-                            <constraint firstItem="eJB-oe-zfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QcD-Hu-uHp"/>
-                            <constraint firstItem="eJB-oe-zfS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mDP-an-NbL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uXc-9i-ZOR" secondAttribute="trailing" constant="88" id="6OJ-fX-pfQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPy-sq-Fyh" secondAttribute="trailing" constant="20" id="EgQ-0d-LXF"/>
+                            <constraint firstItem="uXc-9i-ZOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="Haa-bH-SNS"/>
+                            <constraint firstItem="sNy-ku-BZe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="csu-uK-bpx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tVL-Oj-vib" secondAttribute="trailing" constant="88" id="gAd-hV-o1U"/>
+                            <constraint firstItem="tVL-Oj-vib" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="jrj-pq-BCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zPy-sq-Fyh" secondAttribute="bottom" constant="20" id="mpw-S2-YLa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sNy-ku-BZe" secondAttribute="trailing" constant="88" id="tto-48-Xfs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="game" destination="UfW-fv-U52" id="KqO-A2-wfd"/>
+                        <outlet property="ranker" destination="waP-EG-cfb" id="11x-bk-MIr"/>
+                        <outlet property="submit" destination="wTH-dO-7cl" id="QUo-Lc-Sk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,8 +199,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="game" width="75" height="75"/>
-        <image name="rank" width="75" height="75"/>
-        <image name="submit" width="75" height="75"/>
+        <image name="game" width="37.5" height="37.5"/>
+        <image name="settings" width="37.5" height="37.5"/>
+        <image name="star" width="37.5" height="37.5"/>
+        <image name="submit" width="37.5" height="37.5"/>
     </resources>
 </document>
