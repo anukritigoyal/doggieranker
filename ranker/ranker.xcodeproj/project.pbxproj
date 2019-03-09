@@ -15,6 +15,7 @@
 		0D3D1A1F223449890036146D /* rankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A1E223449890036146D /* rankerTests.swift */; };
 		0D3D1A2A223449890036146D /* rankerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A29223449890036146D /* rankerUITests.swift */; };
 		0D3D1A38223449FD0036146D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D1A37223449FD0036146D /* GoogleService-Info.plist */; };
+		49D122C222345E7C00BB49C5 /* GuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */; };
 		B869A85BBD84DE7B0F58A8BD /* Pods_rankerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */; };
 		F5C29E901337472298901A32 /* Pods_ranker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9193A13B90352610BBEEB3 /* Pods_ranker.framework */; };
 		F7392F9C19CAA9ED6934B949 /* Pods_rankerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C7401710A898EDA736276E /* Pods_rankerUITests.framework */; };
@@ -55,6 +56,7 @@
 		10C7401710A898EDA736276E /* Pods_rankerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AF027DE6D35BC783B9E063 /* Pods-rankerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.release.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGameViewController.swift; sourceTree = "<group>"; };
 		924964EBCFD7D6A761B7C9DB /* Pods-rankerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.debug.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACA552C902F4D4569653099F /* Pods-rankerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerTests.release.xcconfig"; path = "Target Support Files/Pods-rankerTests/Pods-rankerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE9193A13B90352610BBEEB3 /* Pods_ranker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ranker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				0D3D1A12223449890036146D /* LaunchScreen.storyboard */,
 				0D3D1A15223449890036146D /* Info.plist */,
 				0D3D1A37223449FD0036146D /* GoogleService-Info.plist */,
+				49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */,
 			);
 			path = ranker;
 			sourceTree = "<group>";
@@ -165,7 +168,6 @@
 				924964EBCFD7D6A761B7C9DB /* Pods-rankerUITests.debug.xcconfig */,
 				40AF027DE6D35BC783B9E063 /* Pods-rankerUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -400,6 +402,7 @@
 			files = (
 				0D3D1A0C223449870036146D /* ViewController.swift in Sources */,
 				0D3D1A0A223449870036146D /* AppDelegate.swift in Sources */,
+				49D122C222345E7C00BB49C5 /* GuessingGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

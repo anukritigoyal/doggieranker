@@ -86,20 +86,52 @@
             </objects>
             <point key="canvasLocation" x="1182" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--GuessingGame-->
         <scene sceneID="tye-yZ-hAY">
             <objects>
-                <viewController id="BqY-nX-fsJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuessingGame" title="GuessingGame" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BqY-nX-fsJ" customClass="GuessingGameViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjq-gE-Gif">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-tS-PWP">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X91-QA-e2C">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="664.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beagle" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-nN-mzX">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-JC-Nhw">
+                                                <rect key="frame" x="0.0" y="332" width="375" height="332.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYK-Zq-fKN">
+                                        <rect key="frame" x="0.0" y="664.5" width="375" height="2.5"/>
+                                        <state key="normal" title="View Leaderboard"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ao9-tS-PWP" firstAttribute="height" secondItem="Xjq-gE-Gif" secondAttribute="height" id="9gf-gH-31B"/>
+                            <constraint firstItem="ao9-tS-PWP" firstAttribute="centerY" secondItem="epK-Rq-qxa" secondAttribute="centerY" id="9hA-2q-qLd"/>
+                            <constraint firstItem="ao9-tS-PWP" firstAttribute="centerX" secondItem="epK-Rq-qxa" secondAttribute="centerX" id="Rv9-LE-Ogt"/>
+                            <constraint firstItem="ao9-tS-PWP" firstAttribute="width" secondItem="Xjq-gE-Gif" secondAttribute="width" id="iFH-sH-5I4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="epK-Rq-qxa"/>
                     </view>
+                    <connections>
+                        <outlet property="firstDog" destination="jnC-nN-mzX" id="9ps-I7-Zud"/>
+                        <outlet property="secondDog" destination="QB4-JC-Nhw" id="ah0-AB-4M0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMO-xS-ivQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="987"/>
+            <point key="canvasLocation" x="1113" y="1048"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ehm-jq-o5D">
@@ -147,4 +179,8 @@
             <point key="canvasLocation" x="3465" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beagle" width="860" height="460"/>
+        <image name="dog" width="2880" height="3840"/>
+    </resources>
 </document>
