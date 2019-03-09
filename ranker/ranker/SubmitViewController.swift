@@ -9,9 +9,14 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
+
 
 class SubmitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let image = UIImagePickerController()
+    
+    @IBOutlet weak var dogorcat: UISegmentedControl!
+
     @IBOutlet weak var myImageView: UIImageView!
     @IBAction func importImage(_ sender: Any) {
         let image = UIImagePickerController()
@@ -34,9 +39,28 @@ class SubmitViewController: UIViewController, UINavigationControllerDelegate, UI
         
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func post() {        let type : String = "dog"
+        let score : Int = 0
+        let post : [String : AnyObject] = ["type": type as AnyObject, "score":score as AnyObject]
+        let databaseRef = Database.database().reference()
+        let value : String = databaseRef.child("Posts").childByAutoId().key!
+        databaseRef.child("Posts").child(value).setValue(post)
+        let storageRef = Storage.storage().reference()
+        let imageString = "\(value).jpg"
+        let imageRef = storageRef.child(imageString)
+        if let uploadData = myImageView.image!.pngData() {
+            imageRef.putData(uploadData, metadata: nil, completion: nil)
+        }
+
+        
+        print(value, post)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //print(dogorcat.titleForSegment)
     }
     
 

@@ -70,6 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-118" y="148"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0M4-2g-DOs">
@@ -151,6 +152,15 @@
                                     <action selector="importImage:" destination="AYs-OA-f8x" eventType="touchUpInside" id="Xzz-M5-zSZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ln-EL-4k2">
+                                <rect key="frame" x="0.0" y="625" width="375" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="importImage:" destination="AYs-OA-f8x" eventType="touchUpInside" id="DEe-5U-6gh"/>
+                                    <action selector="post" destination="AYs-OA-f8x" eventType="touchUpInside" id="yFQ-4H-hku"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wz9-jO-2ou"/>
@@ -161,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llY-Ku-59n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464.8000000000002" y="122.78860569715144"/>
+            <point key="canvasLocation" x="3340" y="148"/>
         </scene>
     </scenes>
 </document>
