@@ -14,9 +14,10 @@ import FirebaseStorage
 
 class SubmitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let image = UIImagePickerController()
+    var animalType: String?
     
-    @IBOutlet weak var dogorcat: UISegmentedControl!
-
+    @IBOutlet weak var dogOrCat: UISegmentedControl!
+    
     @IBOutlet weak var myImageView: UIImageView!
     @IBAction func importImage(_ sender: Any) {
         let image = UIImagePickerController()
@@ -28,6 +29,12 @@ class SubmitViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
 
+    @IBAction func segmentedValChange(_ sender: Any) {
+        let selected = dogOrCat.selectedSegmentIndex
+        animalType = dogOrCat.titleForSegment(at: selected)
+        print(animalType!)
+        
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -40,12 +47,14 @@ class SubmitViewController: UIViewController, UINavigationControllerDelegate, UI
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func post() {        let type : String = "dog"
+    @IBAction func post() {
+        let type : String = animalType!
         let score : Int = 0
-        let post : [String : AnyObject] = ["type": type as AnyObject, "score":score as AnyObject]
+        let post : [String : AnyObject] = ["score":score as AnyObject]
+//        let post : [String : AnyObject] = ["type": type as AnyObject, "score":score as AnyObject]
         let databaseRef = Database.database().reference()
-        let value : String = databaseRef.child("Posts").childByAutoId().key!
-        databaseRef.child("Posts").child(value).setValue(post)
+        let value : String = databaseRef.child("Posts/\(type)").childByAutoId().key!
+        databaseRef.child("Posts/\(type)").child(value).setValue(post)
         let storageRef = Storage.storage().reference()
         let imageString = "\(value).jpg"
         let imageRef = storageRef.child(imageString)
@@ -61,8 +70,16 @@ class SubmitViewController: UIViewController, UINavigationControllerDelegate, UI
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //print(dogorcat.titleForSegment)
+        setupSegment()
     }
     
+    private func setupSegment(){
+        let selected = dogOrCat.selectedSegmentIndex
+        dogOrCat.selectedSegmentIndex = 0
+        animalType = dogOrCat.titleForSegment(at: selected)
+        print(animalType!)
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -161,11 +161,23 @@
                                     <action selector="post" destination="AYs-OA-f8x" eventType="touchUpInside" id="yFQ-4H-hku"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-FZ-ix5">
+                                <rect key="frame" x="148" y="493" width="79" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Dog"/>
+                                    <segment title="Cat"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedValChange:" destination="AYs-OA-f8x" eventType="valueChanged" id="k3O-2A-ZoS"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wz9-jO-2ou"/>
                     </view>
                     <connections>
+                        <outlet property="dogOrCat" destination="Vqe-FZ-ix5" id="Cgk-d6-hlG"/>
                         <outlet property="myImageView" destination="cYC-2k-627" id="Off-ah-l5b"/>
                     </connections>
                 </viewController>
