@@ -115,23 +115,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-tS-PWP">
-                                <rect key="frame" x="0.0" y="26.5" width="375" height="634"/>
+                                <rect key="frame" x="0.0" y="36" width="375" height="615"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-LU-TOm" userLabel="Game Title">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-Gd-vKV" userLabel="Game description">
-                                        <rect key="frame" x="0.0" y="161.5" width="375" height="98.5"/>
+                                        <rect key="frame" x="0.0" y="122.5" width="375" height="217.5"/>
                                         <string key="text">In this game you try to guess which of the 2 dogs is more popular. If you select the dog that is less popular you lose and your score will reset.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X91-QA-e2C" userLabel="Image Stack View">
-                                        <rect key="frame" x="0.0" y="265" width="375" height="4"/>
+                                        <rect key="frame" x="0.0" y="345" width="375" height="4"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beagle" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-nN-mzX">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
@@ -166,31 +166,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f7I-yK-1vX" userLabel="Loading Images Stack">
-                                        <rect key="frame" x="0.0" y="270" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="350" width="375" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading dog pictures..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M0-fI-4yg">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="96"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="71"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Uq-KWj">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="96"/>
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="71"/>
                                             </activityIndicatorView>
                                         </subviews>
                                     </stackView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYz-5u-bQN">
-                                        <rect key="frame" x="0.0" y="371" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="426" width="375" height="0.0"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
                                             <action selector="startGame:" destination="BqY-nX-fsJ" eventType="touchUpInside" id="7hi-1C-V5M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYK-Zq-fKN">
-                                        <rect key="frame" x="0.0" y="376" width="375" height="258"/>
+                                        <rect key="frame" x="0.0" y="431" width="375" height="184"/>
                                         <state key="normal" title="View Leaderboard"/>
                                         <connections>
-                                            <segue destination="wqW-ot-axF" kind="show" id="0lr-GV-yho"/>
+                                            <segue destination="2m4-xi-DxM" kind="show" id="u2P-nj-uvL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -198,7 +198,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ao9-tS-PWP" firstAttribute="height" secondItem="Xjq-gE-Gif" secondAttribute="height" multiplier="0.95" id="9gf-gH-31B"/>
+                            <constraint firstItem="ao9-tS-PWP" firstAttribute="height" secondItem="epK-Rq-qxa" secondAttribute="height" multiplier="0.95" id="9gf-gH-31B"/>
                             <constraint firstItem="ao9-tS-PWP" firstAttribute="centerY" secondItem="epK-Rq-qxa" secondAttribute="centerY" id="9hA-2q-qLd"/>
                             <constraint firstItem="ao9-tS-PWP" firstAttribute="centerX" secondItem="epK-Rq-qxa" secondAttribute="centerX" id="Rv9-LE-Ogt"/>
                             <constraint firstItem="ao9-tS-PWP" firstAttribute="width" secondItem="Xjq-gE-Gif" secondAttribute="width" id="iFH-sH-5I4"/>
@@ -211,7 +211,7 @@
                         <outlet property="gameDesc" destination="6dn-Gd-vKV" id="WA5-gu-ACI"/>
                         <outlet property="gameTitle" destination="qEs-LU-TOm" id="dmU-2v-IJg"/>
                         <outlet property="imageStackView" destination="X91-QA-e2C" id="zL7-LV-3eu"/>
-                        <outlet property="leaderboard" destination="FYK-Zq-fKN" id="OXx-95-D6U"/>
+                        <outlet property="leaderboard" destination="FYK-Zq-fKN" id="dU2-NV-0k8"/>
                         <outlet property="loadingStackView" destination="f7I-yK-1vX" id="mw5-RL-6ib"/>
                         <outlet property="scoreLabel" destination="Q0M-bs-j9W" id="dyx-6U-ln6"/>
                         <outlet property="secondDog" destination="QB4-JC-Nhw" id="ah0-AB-4M0"/>
@@ -225,7 +225,7 @@
         <!--View Controller-->
         <scene sceneID="ehm-jq-o5D">
             <objects>
-                <viewController id="2m4-xi-DxM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Leaderboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2m4-xi-DxM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vVw-PW-qaZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,19 +279,19 @@
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice try!  Add your name to the leaderboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-dN-gR4">
-                                        <rect key="frame" x="13" y="0.0" width="349.5" height="256"/>
+                                        <rect key="frame" x="13" y="0.0" width="349.5" height="187.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haz-nK-gIH">
-                                        <rect key="frame" x="161" y="0.0" width="53.5" height="167"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haz-nK-gIH">
+                                        <rect key="frame" x="161" y="187.5" width="53.5" height="122"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-G5-aLV">
-                                        <rect key="frame" x="133" y="167" width="109" height="244"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-G5-aLV">
+                                        <rect key="frame" x="133" y="309.5" width="109" height="179"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-yu-R2N">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="20.5"/>
@@ -307,13 +307,29 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UXR-wv-Z0g" userLabel="Loading Images Stack">
+                                        <rect key="frame" x="167.5" y="488.5" width="40" height="0.0"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submitting Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xs-7M-4G1">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NCk-co-88X">
+                                                <rect key="frame" x="20" y="0.0" width="20" height="0.0"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-Ns-dzR">
+                                        <rect key="frame" x="163" y="488.5" width="49" height="178.5"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submit:" destination="wqW-ot-axF" eventType="touchUpInside" id="3U4-wT-VYe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-Ns-dzR">
-                                <rect key="frame" x="160" y="318" width="54.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -324,9 +340,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKQ-96-NHR"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingView" destination="UXR-wv-Z0g" id="k8b-yF-thM"/>
+                        <outlet property="scoreLabel" destination="haz-nK-gIH" id="KSD-9T-Dst"/>
+                        <outlet property="submitButton" destination="tZW-Ns-dzR" id="A14-o0-JHO"/>
+                        <outlet property="username" destination="kKX-zx-twJ" id="Tze-EK-7jW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGB-wO-hgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1716" y="1395"/>
         </scene>
     </scenes>
     <resources>

@@ -82,17 +82,25 @@ class GuessingGameViewController: UIViewController {
     //
     // dog represents the picture number(1 or 2) that the user selected
     func dogSelected(dog: Int) {
+        firstDog.isUserInteractionEnabled = false
+        secondDog.isUserInteractionEnabled = false
         if dog == 1 {
             self.correctGuesses += 1
             self.scoreLabel.text = "Score: \(self.correctGuesses)"
             self.correctGuessStack.isHidden = false
         } else {
-            
+            //Incorrect rn...
+//            let InputScoreView = self.storyboard?.instantiateViewController(withIdentifier: "InputScore") as! InputScoreViewController
+//            InputScoreView.score = self.correctGuesses
+//            self.present(InputScoreView, animated: true, completion: nil)
         }
     }
     
+    
     @IBAction func nextPair(_ sender: UIButton) {
-        self.correctGuessStack.isHidden = true
-        //
+//        self.correctGuessStack.isHidden = true
+//        firstDog.isUserInteractionEnabled = true
+//        secondDog.isUserInteractionEnabled = true
+
     }
 }

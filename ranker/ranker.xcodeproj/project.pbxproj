@@ -15,6 +15,8 @@
 		0D3D1A1F223449890036146D /* rankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A1E223449890036146D /* rankerTests.swift */; };
 		0D3D1A2A223449890036146D /* rankerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A29223449890036146D /* rankerUITests.swift */; };
 		0D3D1A38223449FD0036146D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D1A37223449FD0036146D /* GoogleService-Info.plist */; };
+		4933097E2235B11F000478CF /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933097D2235B11F000478CF /* LeaderboardViewController.swift */; };
+		4947B09C2235CAF700745A7B /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4947B09B2235CAF700745A7B /* DataHandler.swift */; };
 		498A78F8223477E5001E97C8 /* InputScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A78F7223477E5001E97C8 /* InputScoreViewController.swift */; };
 		49D122C222345E7C00BB49C5 /* GuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */; };
 		B869A85BBD84DE7B0F58A8BD /* Pods_rankerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */; };
@@ -57,6 +59,8 @@
 		10C7401710A898EDA736276E /* Pods_rankerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AF027DE6D35BC783B9E063 /* Pods-rankerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.release.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4933097D2235B11F000478CF /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		4947B09B2235CAF700745A7B /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		498A78F7223477E5001E97C8 /* InputScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScoreViewController.swift; sourceTree = "<group>"; };
 		49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGameViewController.swift; sourceTree = "<group>"; };
 		924964EBCFD7D6A761B7C9DB /* Pods-rankerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.debug.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				0D3D1A37223449FD0036146D /* GoogleService-Info.plist */,
 				49D122C122345E7C00BB49C5 /* GuessingGameViewController.swift */,
 				498A78F7223477E5001E97C8 /* InputScoreViewController.swift */,
+				4933097D2235B11F000478CF /* LeaderboardViewController.swift */,
+				4947B09B2235CAF700745A7B /* DataHandler.swift */,
 			);
 			path = ranker;
 			sourceTree = "<group>";
@@ -315,14 +321,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ranker/Pods-ranker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +415,9 @@
 			files = (
 				498A78F8223477E5001E97C8 /* InputScoreViewController.swift in Sources */,
 				0D3D1A0C223449870036146D /* ViewController.swift in Sources */,
+				4933097E2235B11F000478CF /* LeaderboardViewController.swift in Sources */,
 				0D3D1A0A223449870036146D /* AppDelegate.swift in Sources */,
+				4947B09C2235CAF700745A7B /* DataHandler.swift in Sources */,
 				49D122C222345E7C00BB49C5 /* GuessingGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
