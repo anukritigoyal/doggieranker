@@ -42,6 +42,8 @@ class GuessingGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataHandler.getAll(gameType: "Guesser", completion: complete1(_:))
+        
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(firstDogSelected))
         firstDog.isUserInteractionEnabled = true
         firstDog.addGestureRecognizer(singleTap)
@@ -49,13 +51,14 @@ class GuessingGameViewController: UIViewController {
         secondDog.isUserInteractionEnabled = true
         secondDog.addGestureRecognizer(singleTapDog2)
         
-        // fetch images... This currently is mimicing the delay that the fetch would take
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // Change `2.0` to the desired number of seconds.
-            self.loadingStackView.isHidden = true
-            
-            self.startGameButton.isHidden = false
-        }
+    }
+
+    
+    private func complete1(_ lol: [Animal]?) {
+        self.loadingStackView.isHidden = true
+        self.startGameButton.isHidden = false
         
+        print(lol![0].id, lol![1].id)
     }
     
 

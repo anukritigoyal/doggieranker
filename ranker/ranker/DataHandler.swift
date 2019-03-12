@@ -16,7 +16,7 @@ var allAnimals: [Animal] = []
 class DataHandler {
 
     // Function is currently hardcoded for dogs, will have to implement cats later (based on settings)
-    static func getAll(gameType: String) -> [Animal]? {
+    static func getAll(gameType: String, completion: @escaping ([UIImage]?) -> ()) {
         let catRef = ref.child("Posts/Cat")
         allAnimals = []
         var currCandidates: [Animal]?
@@ -34,12 +34,14 @@ class DataHandler {
             }
             if gameType == "Ranker" {
                 currCandidates = getTwoRanker()
+                completion(currCandidates)
             } else if gameType == "Guesser" {
                 currCandidates = getTwoGuesser()
+                completion(currCandidates)
             }
+            return
             //
         })
-        return getTwoRanker()
 
     }
     
@@ -82,6 +84,28 @@ class DataHandler {
         return [allAnimals[firstRand], allAnimals[secondRand]]
     }
     
+    static func getPhotos(_ animals:[Animal]?, completion: @escaping ([UIImage]?) -> ()) {
+        // Create a reference to the file you want to download
+        if (animals == nil) {
+            // something, like an alert
+        }
+        let url1 = "\(animals![0].id)"
+        let url2 = "\(animals![1].id)"
+        let islandRef = storageRef.child(url1)
+        
+        // Might make 2 completion handlers.
+        //
+        //
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        islandRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+            }
+        }
+    }
 
     
     static func checkInitial() -> [String] {
@@ -94,11 +118,6 @@ class DataHandler {
         
     }
     
-    
-    
-    //    static func getImage() -> {
-    //
-    //    }
 }
 
 class Animal: NSObject {
