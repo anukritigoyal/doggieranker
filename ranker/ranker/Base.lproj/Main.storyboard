@@ -130,31 +130,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X91-QA-e2C">
-                                        <rect key="frame" x="0.0" y="257.5" width="375" height="4"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-RE-DwQ">
-                                                <rect key="frame" x="67.5" y="0.0" width="240" height="0.0"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beagle" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-nN-mzX">
-                                                        <rect key="frame" x="-68" y="-255" width="375" height="255"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yp-Hx-sgH">
-                                                <rect key="frame" x="67.5" y="4" width="240" height="0.0"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-JC-Nhw">
-                                                        <rect key="frame" x="-68" y="-1" width="375" height="329"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f7I-yK-1vX" userLabel="Loading Images Stack">
                                         <rect key="frame" x="0.0" y="262.5" width="375" height="93"/>
                                         <subviews>
@@ -180,7 +155,7 @@
                                         <rect key="frame" x="0.0" y="365.5" width="375" height="249.5"/>
                                         <state key="normal" title="View Leaderboard"/>
                                         <connections>
-                                            <segue destination="2m4-xi-DxM" kind="show" id="u2P-nj-uvL"/>
+                                            <segue destination="2m4-xi-DxM" kind="show" identifier="toGame" id="u2P-nj-uvL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -196,13 +171,10 @@
                         <viewLayoutGuide key="safeArea" id="epK-Rq-qxa"/>
                     </view>
                     <connections>
-                        <outlet property="firstDog" destination="jnC-nN-mzX" id="9ps-I7-Zud"/>
                         <outlet property="gameDesc" destination="6dn-Gd-vKV" id="WA5-gu-ACI"/>
                         <outlet property="gameTitle" destination="qEs-LU-TOm" id="dmU-2v-IJg"/>
-                        <outlet property="imageStackView" destination="X91-QA-e2C" id="zL7-LV-3eu"/>
                         <outlet property="leaderboard" destination="FYK-Zq-fKN" id="dU2-NV-0k8"/>
                         <outlet property="loadingStackView" destination="f7I-yK-1vX" id="mw5-RL-6ib"/>
-                        <outlet property="secondDog" destination="QB4-JC-Nhw" id="ah0-AB-4M0"/>
                         <outlet property="startGameButton" destination="QYz-5u-bQN" id="oRL-kG-mOs"/>
                     </connections>
                 </viewController>
@@ -341,8 +313,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="beagle" width="860" height="460"/>
-        <image name="dog" width="691.20001220703125" height="921.5999755859375"/>
         <image name="game" width="75" height="75"/>
         <image name="rank" width="75" height="75"/>
         <image name="submit" width="75" height="75"/>
