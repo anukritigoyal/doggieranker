@@ -33,6 +33,7 @@ class SubmitViewController: UIViewController, UINavigationControllerDelegate, UI
         let selected = dogOrCat.selectedSegmentIndex
         animalType = dogOrCat.titleForSegment(at: selected)
         print(animalType!)
+    
         
     }
     

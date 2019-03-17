@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1DC28A223ED55F00227D7D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DC289223ED55F00227D7D /* SettingViewController.swift */; };
+		0D1DC28C223ED57B00227D7D /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DC28B223ED57B00227D7D /* AnimalType.swift */; };
 		0D2EC0DC22345D2A00C56FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EC0DB22345D2A00C56FAD /* ViewController.swift */; };
 		0D2EC0DE22345D3C00C56FAD /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EC0DD22345D3C00C56FAD /* SubmitViewController.swift */; };
 		0D3D1A0A223449870036146D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A09223449870036146D /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1DC289223ED55F00227D7D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		0D1DC28B223ED57B00227D7D /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 		0D2EC0DB22345D2A00C56FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D2EC0DD22345D3C00C56FAD /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		0D3D1A06223449870036146D /* ranker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ranker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +126,8 @@
 				0D3D1A0D223449870036146D /* Main.storyboard */,
 				0D2EC0DB22345D2A00C56FAD /* ViewController.swift */,
 				0D2EC0DD22345D3C00C56FAD /* SubmitViewController.swift */,
+				0D1DC289223ED55F00227D7D /* SettingViewController.swift */,
+				0D1DC28B223ED57B00227D7D /* AnimalType.swift */,
 				0D3D1A10223449890036146D /* Assets.xcassets */,
 				0D3D1A12223449890036146D /* LaunchScreen.storyboard */,
 				0D3D1A15223449890036146D /* Info.plist */,
@@ -407,6 +413,8 @@
 				0D2EC0DC22345D2A00C56FAD /* ViewController.swift in Sources */,
 				0D2EC0DE22345D3C00C56FAD /* SubmitViewController.swift in Sources */,
 				0D3D1A0A223449870036146D /* AppDelegate.swift in Sources */,
+				0D1DC28C223ED57B00227D7D /* AnimalType.swift in Sources */,
+				0D1DC28A223ED55F00227D7D /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
