@@ -35,18 +35,19 @@ class GuessingGameViewController: UIViewController {
     
     @IBOutlet weak var firstDog: UIImageView!
     @IBOutlet weak var secondDog: UIImageView!
-    @IBOutlet weak var correctGuessStack: UIStackView!
     
     @IBOutlet weak var scoreLabel: UILabel!
     var correctGuesses = 0
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataHandler.getAll(gameType: "Guesser", completion: complete1(_:))
+        DataHandler.getAll(gameType: "Guesser", completion: completed(_:))
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(firstDogSelected))
+        let singleTapDog2 = UITapGestureRecognizer(target: self, action: #selector(secondDogSelected))
         firstDog.isUserInteractionEnabled = true
         firstDog.addGestureRecognizer(singleTap)
-        let singleTapDog2 = UITapGestureRecognizer(target: self, action: #selector(secondDogSelected))
         secondDog.isUserInteractionEnabled = true
         secondDog.addGestureRecognizer(singleTapDog2)
         
@@ -55,14 +56,23 @@ class GuessingGameViewController: UIViewController {
     
 
     
-    private func complete1(_ lol: [UIImage]?) {
+    private func completed(_ animalImages: [UIImage]?) {
         self.loadingStackView.isHidden = true
         self.startGameButton.isHidden = false
-        
-        firstDog.image = lol![0]
-        secondDog.image = lol![1]
+        firstDog.image = animalImages![0]
+        secondDog.image = animalImages![1]
     }
     
+    private func reloadComplete(_ animalImages: [UIImage]?) {
+        firstDog.image = animalImages![0]
+        secondDog.image = animalImages![1]
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(firstDogSelected))
+        let singleTapDog2 = UITapGestureRecognizer(target: self, action: #selector(secondDogSelected))
+        firstDog.isUserInteractionEnabled = true
+        firstDog.addGestureRecognizer(singleTap)
+        secondDog.isUserInteractionEnabled = true
+        secondDog.addGestureRecognizer(singleTapDog2)
+    }
 
     @IBAction func startGame(_ sender: UIButton) {
         self.startGameButton.isHidden = true
@@ -81,21 +91,25 @@ class GuessingGameViewController: UIViewController {
         animalSelected(animal: 1)
     }
     
+    
+    
     // Displays the step after a picture is selected
     //   if user is correct: display their new score and ask them to go to the next page.
     //   else: take them to the next page or give them the option to go to the leaderboard?
     //
     // dog represents the picture number(1 or 2) that the user selected
     func animalSelected(animal: Int) {
+        print("pressed")
         firstDog.isUserInteractionEnabled = false
         secondDog.isUserInteractionEnabled = false
         let animals = DataHandler.currSelectedAnimals()
+        print(animals[0].id, animals[1].id)
         let firstGreater: Bool = animals[0].score > animals[1].score
-        
+        print(firstGreater)
         if (animal == 0 && firstGreater) || (animal == 1 && !firstGreater) {
             self.correctGuesses += 1
-            self.scoreLabel.text = "Score: \(self.correctGuesses)"
-            self.correctGuessStack.isHidden = false
+//            self.scoreLabel.text = "Score: \(self.correctGuesses)"
+            DataHandler.getAll(gameType:"Guesser", completion: reloadComplete(_:))
         } else {
             //Incorrect rn...
             //            let InputScoreView = self.storyboard?.instantiateViewController(withIdentifier: "InputScore") as! InputScoreViewController

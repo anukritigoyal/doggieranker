@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82s-tO-qn5">
-                                <rect key="frame" x="112" y="181" width="201" height="100"/>
+                                <rect key="frame" x="112" y="181" width="176" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waP-EG-cfb">
-                                        <rect key="frame" x="100" y="0.0" width="101" height="100"/>
+                                        <rect key="frame" x="75" y="0.0" width="101" height="75"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Doggie Ranker"/>
                                         <connections>
@@ -36,14 +36,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-WE-SRH">
-                                <rect key="frame" x="116" y="364" width="193" height="100"/>
+                                <rect key="frame" x="116" y="364" width="168" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="submit" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-xt-F9v">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
-                                        <rect key="frame" x="100" y="0.0" width="93" height="100"/>
+                                        <rect key="frame" x="75" y="0.0" width="93" height="75"/>
                                         <state key="normal" title="Submit Photo"/>
                                         <connections>
                                             <segue destination="AYs-OA-f8x" kind="show" id="B09-dZ-HUS"/>
@@ -62,14 +62,14 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5M-oD-R8A">
-                                <rect key="frame" x="108" y="272" width="208" height="100"/>
+                                <rect key="frame" x="108" y="272" width="183" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
-                                        <rect key="frame" x="100" y="0.0" width="108" height="100"/>
+                                        <rect key="frame" x="75" y="0.0" width="108" height="75"/>
                                         <state key="normal" title="Guessing Game"/>
                                         <connections>
                                             <segue destination="BqY-nX-fsJ" kind="show" id="aft-XP-AYE"/>
@@ -118,76 +118,66 @@
                                 <rect key="frame" x="0.0" y="36" width="375" height="615"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-LU-TOm" userLabel="Game Title">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-Gd-vKV" userLabel="Game description">
-                                        <rect key="frame" x="0.0" y="122.5" width="375" height="217.5"/>
+                                        <rect key="frame" x="0.0" y="157" width="375" height="95.5"/>
                                         <string key="text">In this game you try to guess which of the 2 dogs is more popular. If you select the dog that is less popular you lose and your score will reset.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X91-QA-e2C" userLabel="Image Stack View">
-                                        <rect key="frame" x="0.0" y="345" width="375" height="4"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="X91-QA-e2C">
+                                        <rect key="frame" x="0.0" y="257.5" width="375" height="4"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beagle" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-nN-mzX">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
-                                            </imageView>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-nf-rou" userLabel="Correct Guess Stack">
-                                                <rect key="frame" x="131.5" y="2" width="112.5" height="0.0"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-RE-DwQ">
+                                                <rect key="frame" x="67.5" y="0.0" width="240" height="0.0"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're correct!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1X-HX-kzD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0M-bs-j9W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ey-Ve-JJV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="0.0"/>
-                                                        <state key="normal" title="Guess Next Pair"/>
-                                                        <connections>
-                                                            <action selector="nextPair:" destination="BqY-nX-fsJ" eventType="touchUpInside" id="yoz-wY-VMV"/>
-                                                        </connections>
-                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beagle" translatesAutoresizingMaskIntoConstraints="NO" id="jnC-nN-mzX">
+                                                        <rect key="frame" x="-68" y="-255" width="375" height="255"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
-                                            </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-JC-Nhw">
-                                                <rect key="frame" x="0.0" y="4" width="375" height="0.0"/>
-                                            </imageView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yp-Hx-sgH">
+                                                <rect key="frame" x="67.5" y="4" width="240" height="0.0"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-JC-Nhw">
+                                                        <rect key="frame" x="-68" y="-1" width="375" height="329"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f7I-yK-1vX" userLabel="Loading Images Stack">
-                                        <rect key="frame" x="0.0" y="350" width="375" height="71"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="375" height="93"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading dog pictures..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M0-fI-4yg">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="71"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="93"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Uq-KWj">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="71"/>
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="93"/>
                                             </activityIndicatorView>
                                         </subviews>
                                     </stackView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYz-5u-bQN">
-                                        <rect key="frame" x="0.0" y="426" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="360.5" width="375" height="0.0"/>
                                         <state key="normal" title="Start Game"/>
                                         <connections>
                                             <action selector="startGame:" destination="BqY-nX-fsJ" eventType="touchUpInside" id="7hi-1C-V5M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYK-Zq-fKN">
-                                        <rect key="frame" x="0.0" y="431" width="375" height="184"/>
+                                        <rect key="frame" x="0.0" y="365.5" width="375" height="249.5"/>
                                         <state key="normal" title="View Leaderboard"/>
                                         <connections>
                                             <segue destination="2m4-xi-DxM" kind="show" id="u2P-nj-uvL"/>
@@ -206,14 +196,12 @@
                         <viewLayoutGuide key="safeArea" id="epK-Rq-qxa"/>
                     </view>
                     <connections>
-                        <outlet property="correctGuessStack" destination="A9q-nf-rou" id="lgQ-fI-OEx"/>
                         <outlet property="firstDog" destination="jnC-nN-mzX" id="9ps-I7-Zud"/>
                         <outlet property="gameDesc" destination="6dn-Gd-vKV" id="WA5-gu-ACI"/>
                         <outlet property="gameTitle" destination="qEs-LU-TOm" id="dmU-2v-IJg"/>
                         <outlet property="imageStackView" destination="X91-QA-e2C" id="zL7-LV-3eu"/>
                         <outlet property="leaderboard" destination="FYK-Zq-fKN" id="dU2-NV-0k8"/>
                         <outlet property="loadingStackView" destination="f7I-yK-1vX" id="mw5-RL-6ib"/>
-                        <outlet property="scoreLabel" destination="Q0M-bs-j9W" id="dyx-6U-ln6"/>
                         <outlet property="secondDog" destination="QB4-JC-Nhw" id="ah0-AB-4M0"/>
                         <outlet property="startGameButton" destination="QYz-5u-bQN" id="oRL-kG-mOs"/>
                     </connections>
@@ -225,7 +213,7 @@
         <!--View Controller-->
         <scene sceneID="ehm-jq-o5D">
             <objects>
-                <viewController storyboardIdentifier="Leaderboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2m4-xi-DxM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Leaderboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2m4-xi-DxM" customClass="GGViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vVw-PW-qaZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ky7-hR-GfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639" y="986"/>
+            <point key="canvasLocation" x="2636" y="984.55772113943033"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OvJ-Nk-sbj">
@@ -354,9 +342,9 @@
     </scenes>
     <resources>
         <image name="beagle" width="860" height="460"/>
-        <image name="dog" width="2880" height="3840"/>
-        <image name="game" width="100" height="100"/>
-        <image name="rank" width="100" height="100"/>
-        <image name="submit" width="100" height="100"/>
+        <image name="dog" width="691.20001220703125" height="921.5999755859375"/>
+        <image name="game" width="75" height="75"/>
+        <image name="rank" width="75" height="75"/>
+        <image name="submit" width="75" height="75"/>
     </resources>
 </document>

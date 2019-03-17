@@ -15,6 +15,7 @@ let ref = Database.database().reference()
 let storageRef = Storage.storage().reference()
 var allAnimals: [Animal] = []
 var selectedAnimals: [Animal] = []
+var allImages: [UIImage] = []
 
 class DataHandler {
 
@@ -29,7 +30,7 @@ class DataHandler {
                 let key = snap.key
                 let value = snap.value as! [String:Any]
                 // valueType should be set to whatever it's set in settings, not hardcoded
-                let valueType = "Cat"
+                let valueType = "Dog"
                 let valueScore = value["score"] as! Int
                 let toAddAnimal = Animal(id: key, type: valueType, score: valueScore)
                 print("are we even getting here", key, valueType, valueScore)
@@ -72,7 +73,6 @@ class DataHandler {
         allSeen.append(unseenAnimals[firstRand].id)
         allSeen.append(unseenAnimals[secondRand].id)
         UserDefaults.standard.set(allSeen, forKey: "seen")
-        selectedAnimals = [unseenAnimals[firstRand], unseenAnimals[secondRand]]
 
         return [unseenAnimals[firstRand], unseenAnimals[secondRand]]
         
@@ -86,7 +86,6 @@ class DataHandler {
             secondRand = Int.random(in: 0..<allAnimals.count)
         }
         print(allAnimals[firstRand].id, allAnimals[secondRand].id)
-        selectedAnimals = [allAnimals[firstRand], allAnimals[secondRand]]
         return [allAnimals[firstRand], allAnimals[secondRand]]
     }
     
@@ -98,24 +97,25 @@ class DataHandler {
 //            return
 //        }
         let group = DispatchGroup()
-        let url1 = "\(animals![0].id).jpg"
-        let url2 = "\(animals![1].id).jpg"
         print(animals![0].id, animals![1].id)
 //        let url1 = "Frank.jpg"
 //        let url2 = "Lucy.jpg"
 //        let urls: [String] = [animals![0].id, animals![1].id]
-        let urls: [String] = [url1, url2]
-        var allImages: [UIImage] = []
-        for url in urls {
+//        let urls: [String] = [url1, url2]
+        allImages = []
+        for animal in animals! {
+            let url = "\(animal.id).jpg"
             group.enter() // for imageManager
             let imgRef = storageRef.child(url)
             imgRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                 if let error = error {
                     print("ERROR:", error)
+                    return
                 } else {
                     let image = UIImage(data: data!)
                     allImages.append(image!)
                 }
+                selectedAnimals.append(animal)
                 group.leave()
             }
         }
@@ -126,6 +126,10 @@ class DataHandler {
     
     static func currSelectedAnimals() -> [Animal] {
         return selectedAnimals
+    }
+    
+    static func getPhotos() -> [UIImage] {
+        return allImages
     }
         
     
