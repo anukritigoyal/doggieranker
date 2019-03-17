@@ -15,8 +15,10 @@
 		0D3D1A1F223449890036146D /* rankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A1E223449890036146D /* rankerTests.swift */; };
 		0D3D1A2A223449890036146D /* rankerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D1A29223449890036146D /* rankerUITests.swift */; };
 		0D3D1A38223449FD0036146D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D3D1A37223449FD0036146D /* GoogleService-Info.plist */; };
+		57793907223EE553005DD960 /* GGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57793906223EE553005DD960 /* GGViewController.swift */; };
+		57793909223EE5A6005DD960 /* GuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57793908223EE5A6005DD960 /* GuessingGameViewController.swift */; };
+		5779390B223EF345005DD960 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779390A223EF345005DD960 /* SubmitViewController.swift */; };
 		6628F2852235B7E600FCFE15 /* RankerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628F2842235B7E600FCFE15 /* RankerViewController.swift */; };
-		6628F2872235C24000FCFE15 /* ChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628F2862235C24000FCFE15 /* ChosenViewController.swift */; };
 		6628F2892235D8BC00FCFE15 /* DoggieRankerStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628F2882235D8BC00FCFE15 /* DoggieRankerStartViewController.swift */; };
 		66EDF6F6223DD33C00874291 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EDF6F5223DD33C00874291 /* DataHandler.swift */; };
 		B869A85BBD84DE7B0F58A8BD /* Pods_rankerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */; };
@@ -59,8 +61,10 @@
 		10C7401710A898EDA736276E /* Pods_rankerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AAEAAD456879306EFFED7F /* Pods_rankerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AF027DE6D35BC783B9E063 /* Pods-rankerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.release.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57793906223EE553005DD960 /* GGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGViewController.swift; sourceTree = "<group>"; };
+		57793908223EE5A6005DD960 /* GuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGameViewController.swift; sourceTree = "<group>"; };
+		5779390A223EF345005DD960 /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		6628F2842235B7E600FCFE15 /* RankerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankerViewController.swift; sourceTree = "<group>"; };
-		6628F2862235C24000FCFE15 /* ChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenViewController.swift; sourceTree = "<group>"; };
 		6628F2882235D8BC00FCFE15 /* DoggieRankerStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggieRankerStartViewController.swift; sourceTree = "<group>"; };
 		66EDF6F5223DD33C00874291 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		924964EBCFD7D6A761B7C9DB /* Pods-rankerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankerUITests.debug.xcconfig"; path = "Target Support Files/Pods-rankerUITests/Pods-rankerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,12 +133,14 @@
 				0D3D1A0D223449870036146D /* Main.storyboard */,
 				66EDF6F5223DD33C00874291 /* DataHandler.swift */,
 				6628F2882235D8BC00FCFE15 /* DoggieRankerStartViewController.swift */,
-				6628F2862235C24000FCFE15 /* ChosenViewController.swift */,
+				57793906223EE553005DD960 /* GGViewController.swift */,
 				6628F2842235B7E600FCFE15 /* RankerViewController.swift */,
 				0D3D1A10223449890036146D /* Assets.xcassets */,
 				0D3D1A12223449890036146D /* LaunchScreen.storyboard */,
 				0D3D1A15223449890036146D /* Info.plist */,
 				0D3D1A37223449FD0036146D /* GoogleService-Info.plist */,
+				57793908223EE5A6005DD960 /* GuessingGameViewController.swift */,
+				5779390A223EF345005DD960 /* SubmitViewController.swift */,
 			);
 			path = ranker;
 			sourceTree = "<group>";
@@ -413,12 +419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6628F2872235C24000FCFE15 /* ChosenViewController.swift in Sources */,
 				0D3D1A0C223449870036146D /* ViewController.swift in Sources */,
+				57793909223EE5A6005DD960 /* GuessingGameViewController.swift in Sources */,
 				6628F2852235B7E600FCFE15 /* RankerViewController.swift in Sources */,
+				5779390B223EF345005DD960 /* SubmitViewController.swift in Sources */,
 				6628F2892235D8BC00FCFE15 /* DoggieRankerStartViewController.swift in Sources */,
 				66EDF6F6223DD33C00874291 /* DataHandler.swift in Sources */,
 				0D3D1A0A223449870036146D /* AppDelegate.swift in Sources */,
+				57793907223EE553005DD960 /* GGViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

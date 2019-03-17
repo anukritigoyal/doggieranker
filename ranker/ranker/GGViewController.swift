@@ -1,19 +1,8 @@
-//
-//  DoggieRankerStartViewController.swift
-//  ranker
-//
-//  Created by Anukriti Goyal on 10/3/19.
-//  Copyright © 2019 huskyluverzz. All rights reserved.
-//
-
 import UIKit
 
-class DoggieRankerStartViewController: UIViewController {
 
-    @IBOutlet weak var start: UIButton!
-    
-    
-    
+
+class GGViewController: UIViewController {
     private var compactConstraints: [NSLayoutConstraint] = []
     private var regularConstraints: [NSLayoutConstraint] = []
     override func viewDidLoad() {
@@ -29,7 +18,7 @@ class DoggieRankerStartViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    var correctGuesses = 0
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
@@ -67,7 +56,7 @@ class DoggieRankerStartViewController: UIViewController {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.layer.cornerRadius = 15
-        
+
         return img
     }()
     
@@ -78,16 +67,13 @@ class DoggieRankerStartViewController: UIViewController {
         button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.font = UIFont(name: "Chalkboard SE", size:20.0)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-
         return button
     }()
-    
-    @objc func buttonAction() {
-        performSegue(withIdentifier: "rankToHome", sender: self)
-    }
     //    let singleTap = UITapGestureRecognizer(target: self, action: #selector(selected0))
     //    let singleTap2 = UITapGestureRecognizer(target: self, action: #selector(selected1))
-    
+    @objc func buttonAction() {
+        performSegue(withIdentifier: "ggBackToHome", sender: self)
+    }
     
     
     private func setupMain() {
@@ -124,7 +110,7 @@ class DoggieRankerStartViewController: UIViewController {
         
         backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 45).isActive = true
         backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
-        
+
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(selected0))
         let singleTap2 = UITapGestureRecognizer(target: self, action: #selector(selected1))
         firstImage.isUserInteractionEnabled = true
@@ -154,7 +140,14 @@ class DoggieRankerStartViewController: UIViewController {
         secondImage.isUserInteractionEnabled = false
         let animals = DataHandler.currSelectedAnimals()
         print(animals[0].id, animals[1].id)
-       
+        let firstGreater: Bool = animals[0].score > animals[1].score
+        print(firstGreater)
+        if (selected == 0 && firstGreater) || (selected == 1 && !firstGreater) {
+            DataHandler.addScore()
+            DataHandler.getAll(gameType:"Guesser", completion: reloadComplete(_:))
+        } else {
+            performSegue(withIdentifier: "toSubmit", sender: self)
+        }
     }
     
     private func reloadComplete(_ animalImages: [UIImage]?) {
@@ -179,15 +172,4 @@ class DoggieRankerStartViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

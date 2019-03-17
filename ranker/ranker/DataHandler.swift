@@ -5,7 +5,6 @@
 //  Created by Student User on 3/10/19.
 //  Copyright © 2019 huskyluverzz. All rights reserved.
 //
-
 import Foundation
 import Firebase
 import FirebaseDatabase
@@ -15,6 +14,8 @@ let ref = Database.database().reference()
 let storageRef = Storage.storage().reference()
 var allAnimals: [Animal] = []
 var selectedAnimals: [Animal] = []
+var allImages: [UIImage] = []
+var score: Int = 0
 
 class DataHandler {
     
@@ -32,7 +33,7 @@ class DataHandler {
                 let valueType = "Dog"
                 let valueScore = value["score"] as! Int
                 let toAddAnimal = Animal(id: key, type: valueType, score: valueScore)
-//                print("are we even getting here", key, valueType, valueScore)
+                print("are we even getting here", key, valueType, valueScore)
                 allAnimals.append(toAddAnimal)
             }
             selectedAnimals = []
@@ -59,11 +60,8 @@ class DataHandler {
                 unseenAnimals.append(animal)
             }
         }
-//        for animal in allSeen {
-//            print("3",animal)
-//        }
         if unseenAnimals.count < 2 {
-            print("3, We're returning Nil!")
+            print("We're returning Nil!")
             return nil
         }
         let firstRand = Int.random(in: 0..<unseenAnimals.count)
@@ -92,7 +90,6 @@ class DataHandler {
     }
     
     static func getPhotos(_ animals:[Animal]?, completion: @escaping ([UIImage]?) -> ()) {
-//        _ animals:[Animal]?, completion: @escaping ([UIImage]?) -> (), name: ([String]?) -> ()
         //        _ animals:[Animal]?, completion: @escaping ([UIImage]?) -> ()
         // Create a reference to the file you want to download
         //        if (animals == nil) {
@@ -100,20 +97,12 @@ class DataHandler {
         //            return
         //        }
         let group = DispatchGroup()
-        guard let currAnimals = animals else {
-            completion(nil)
-            return
-        }
-        let url1 = "\(animals![0].id).jpg"
-        let url2 = "\(animals![1].id).jpg"
         print(animals![0].id, animals![1].id)
         //        let url1 = "Frank.jpg"
         //        let url2 = "Lucy.jpg"
         //        let urls: [String] = [animals![0].id, animals![1].id]
-//        let urls: [String] = [url1, url2]
-//        name(urls)
-        
-        var allImages: [UIImage] = []
+        //        let urls: [String] = [url1, url2]
+        allImages = []
         for animal in animals! {
             let url = "\(animal.id).jpg"
             group.enter() // for imageManager
@@ -121,12 +110,9 @@ class DataHandler {
             imgRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                 if let error = error {
                     print("ERROR:", error)
+                    return
                 } else {
                     let image = UIImage(data: data!)
-                    if image == nil {
-                        print("why tho")
-                    }
-                    print("We were able to obtain the photo")
                     allImages.append(image!)
                 }
                 selectedAnimals.append(animal)
@@ -142,6 +128,21 @@ class DataHandler {
         return selectedAnimals
     }
     
+    static func getPhotos() -> [UIImage] {
+        return allImages
+    }
+    
+    static func resetScore() {
+        score = 0
+    }
+    
+    static func addScore() {
+        score = score + 1
+    }
+    
+    static func currScore() -> Int {
+        return score
+    }
     
     
     
@@ -168,3 +169,4 @@ class Animal: NSObject {
         self.score = score
     }
 }
+

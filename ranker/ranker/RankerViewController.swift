@@ -12,23 +12,12 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class RankerViewController: UIViewController {
-    @IBOutlet weak var first: UIButton!
-    @IBOutlet weak var second: UIButton!
-    
     @IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var img2: UIImageView!
-    
-    var pressed = true
-    
-    var firstIndex = 0;
-    var secondIndex = 1;
     
     var img1id = "";
     var img2id = "";
     
-    
-    var array = [1, 2, 3, 4, 5, 6, 7, 8]
-    var chosen = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,20 +38,7 @@ class RankerViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "proceed1" {
-            let vc = segue.destination as! ChosenViewController
-            chosen = firstIndex
-            vc.chosen = chosen
-            vc.arrayLength = array.count
-
-        } else if segue.identifier == "proceed2" {
-            let vc = segue.destination as! ChosenViewController
-            chosen = secondIndex
-            vc.chosen = chosen
-            vc.arrayLength = array.count
-        }
-    }
+  
     
     private func complete1(_ lol: [UIImage]?) {
 //        self.loadingStackView.isHidden = true
