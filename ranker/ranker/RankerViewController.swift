@@ -30,16 +30,6 @@ class RankerViewController: UIViewController {
     var array = [1, 2, 3, 4, 5, 6, 7, 8]
     var chosen = -1
     
-//    @IBAction func pressed(_ sender: UIButton) {
-//        if  sender.tag == 1 {
-//            chosen = firstIndex
-//        } else {
-//            chosen = secondIndex
-//        }
-//    }
-//
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
@@ -78,8 +68,6 @@ class RankerViewController: UIViewController {
 //        self.loadingStackView.isHidden = true
 //        self.startGameButton.isHidden = false
 
-//        first.setImage(lol![0], for: UIControl.State.normal)
-//        second.setImage(lol![1], for: UIControl.State.normal)
         guard let currImages = lol else {
             let alert = UIAlertController(title: "Sorry!", message: "You've already guessed on all the animals!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Return home", style: UIAlertAction.Style.default, handler:{
@@ -98,13 +86,6 @@ class RankerViewController: UIViewController {
         print(img1id)
         print(img2id)
     }
-    
-//    private func url(_ name: [String]?) {
-//        img1id = name![0]
-//        print(img1id)
-//        img2id = name![1]
-//        print(img2id)
-//    }
     
     @objc func img1Selected() {
         selected(0)

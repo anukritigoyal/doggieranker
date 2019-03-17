@@ -17,9 +17,6 @@ class DoggieRankerStartViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
         self.start.layer.cornerRadius = 20
-        
-//        start.frame = CGRect(x: 160, y: 340, width: 70, height: 70)
-//        start.layer.cornerRadius = 0.5 * start.bounds.size.width
 
         // Do any additional setup after loading the view.
     }
