@@ -13,19 +13,19 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="tVL-Oj-vib">
-                                <rect key="frame" x="92" y="260" width="194" height="37"/>
+                                <rect key="frame" x="92" y="273" width="194" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
-                                        <rect key="frame" x="85" y="0.0" width="109" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
+                                        <rect key="frame" x="85" y="0.0" width="109" height="50"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                         <state key="normal" title="Guessing Game">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,13 +52,13 @@
                                 <state key="normal" image="ranker"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="uXc-9i-ZOR">
-                                <rect key="frame" x="92" y="190" width="190" height="37"/>
+                                <rect key="frame" x="92" y="190" width="190" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-7h-bJp">
-                                        <rect key="frame" x="85" y="0.0" width="105" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-7h-bJp">
+                                        <rect key="frame" x="85" y="0.0" width="105" height="50"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                         <state key="normal" title="Doggie Ranker">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,13 +70,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="sNy-ku-BZe">
-                                <rect key="frame" x="92" y="330" width="180" height="37"/>
+                                <rect key="frame" x="92" y="356" width="180" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="submit" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-xt-F9v">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="submit" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-xt-F9v">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
-                                        <rect key="frame" x="85" y="0.0" width="95" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
+                                        <rect key="frame" x="98" y="0.0" width="82" height="50"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
                                         <state key="normal" title="Submit Photo">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,6 +184,7 @@
                     <connections>
                         <outlet property="first" destination="d9t-jl-qtp" id="WlO-Ut-MGm"/>
                         <outlet property="img1" destination="L2C-op-9FT" id="Vol-GY-Zop"/>
+                        <outlet property="img2" destination="b1r-bM-WRc" id="R6G-zL-i5i"/>
                         <outlet property="second" destination="QnC-Wk-92L" id="FqO-EB-WRh"/>
                     </connections>
                 </viewController>
@@ -363,11 +364,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="game" width="37.5" height="37.5"/>
+        <image name="game" width="50" height="50"/>
         <image name="ranker" width="200" height="50"/>
-        <image name="settings" width="37.5" height="37.5"/>
-        <image name="star" width="37.5" height="37.5"/>
-        <image name="submit" width="37.5" height="37.5"/>
+        <image name="settings" width="50" height="50"/>
+        <image name="star" width="50" height="50"/>
+        <image name="submit" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hni-SZ-szA"/>

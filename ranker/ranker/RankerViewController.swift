@@ -49,30 +49,30 @@ class RankerViewController: UIViewController {
 //        second.setTitle(String(array[secondIndex]), for: .normal)
         
         DataHandler.getAll(gameType: "Ranker", completion: complete1(_:))
-//        let tapimg1 = UITapGestureRecognizer(target: self, action: #selector(img1Selected))
-//        img1.isUserInteractionEnabled = true
-//        img1.addGestureRecognizer(tapimg1)
-//
-//        let tapimg2 = UITapGestureRecognizer(target: self, action: #selector(img2Selected))
-//        img2.isUserInteractionEnabled = true
-//        img2.addGestureRecognizer(tapimg2)
+        let tapimg1 = UITapGestureRecognizer(target: self, action: #selector(img1Selected))
+        img1.isUserInteractionEnabled = true
+        img1.addGestureRecognizer(tapimg1)
+
+        let tapimg2 = UITapGestureRecognizer(target: self, action: #selector(img2Selected))
+        img2.isUserInteractionEnabled = true
+        img2.addGestureRecognizer(tapimg2)
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "proceed1" {
-//            let vc = segue.destination as! ChosenViewController
-//            chosen = firstIndex
-//            vc.chosen = chosen
-//            vc.arrayLength = array.count
-//
-//        } else if segue.identifier == "proceed2" {
-//            let vc = segue.destination as! ChosenViewController
-//            chosen = secondIndex
-//            vc.chosen = chosen
-//            vc.arrayLength = array.count
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "proceed1" {
+            let vc = segue.destination as! ChosenViewController
+            chosen = firstIndex
+            vc.chosen = chosen
+            vc.arrayLength = array.count
+
+        } else if segue.identifier == "proceed2" {
+            let vc = segue.destination as! ChosenViewController
+            chosen = secondIndex
+            vc.chosen = chosen
+            vc.arrayLength = array.count
+        }
+    }
     
     private func complete1(_ lol: [UIImage]?) {
 //        self.loadingStackView.isHidden = true
@@ -81,16 +81,22 @@ class RankerViewController: UIViewController {
 //        first.setImage(lol![0], for: UIControl.State.normal)
 //        second.setImage(lol![1], for: UIControl.State.normal)
         guard let currImages = lol else {
-            // send an alert and reroute back to homepage
-            // something like, "you've already guessed on all the animals!
+            let alert = UIAlertController(title: "Sorry!", message: "You've already guessed on all the animals!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Return home", style: UIAlertAction.Style.default, handler:{
+                (act: UIAlertAction) in
+                self.returnToHomeScreen()
+            }))
+            self.present(alert, animated: true, completion: nil)
             return
         }
-        print(currImages)
+
+
         img1.image = currImages[0]
         img2.image = currImages[1]
         img1id = DataHandler.currSelectedAnimals()[0].id
         img2id = DataHandler.currSelectedAnimals()[1].id
-        print(img1id, img2id)
+        print(img1id)
+        print(img2id)
     }
     
 //    private func url(_ name: [String]?) {
@@ -101,32 +107,31 @@ class RankerViewController: UIViewController {
 //    }
     
     @objc func img1Selected() {
-        selected(animal: 0)
+        selected(0)
     }
     
     @objc func img2Selected() {
-        selected(animal: 1)
+        selected(1)
     }
     
-    func selected(animal: Int) {
+    func selected(_ selectedAnimal: Int) {
+        // If we want to do anything before posting otherwise we can remove this method with just post()
+        post(selectedAnimal)
+    }
+    
+    func returnToHomeScreen() {
+        let HomeView = self.storyboard?.instantiateViewController(withIdentifier: "Home") as! ViewController
+        self.present(HomeView, animated: true, completion: nil)
+    }
+    
+    func post(_ selectedAnimal: Int) {
+        let name = DataHandler.currSelectedAnimals()[selectedAnimal].id
+        DataHandler.currSelectedAnimals()[selectedAnimal].score = DataHandler.currSelectedAnimals()[selectedAnimal].score + 1
+        let score = DataHandler.currSelectedAnimals()[selectedAnimal].score
         
+        let databaseRef = Database.database().reference()
+        //databaseRef.child("Posts/\(type)").child(value).setValue(post)
+        databaseRef.child("Posts/Dog/\(name)/score/").setValue(score)
     }
     
-//    @IBAction func post() {
-//        let score : Int = 0
-//        let post : [String : AnyObject] = ["score":score as AnyObject]
-//        //        let post : [String : AnyObject] = ["type": type as AnyObject, "score":score as AnyObject]
-//        let databaseRef = Database.database().reference()
-//        let value : String = databaseRef.child("Posts/Dog/").childByAutoId().key!
-//        databaseRef.child("Posts/\(type)").child(value).setValue(post)
-//        let storageRef = Storage.storage().reference()
-//        let imageString = "\(value).jpg"
-//        let imageRef = storageRef.child(imageString)
-//        if let uploadData = myImageView.image!.pngData() {
-//            imageRef.putData(uploadData, metadata: nil, completion: nil)
-//        }
-//
-//
-//        print(value, post)
-//    }
 }
