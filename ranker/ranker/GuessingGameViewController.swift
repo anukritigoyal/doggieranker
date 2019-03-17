@@ -43,7 +43,6 @@ class GuessingGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DataHandler.getAll(gameType: "Guesser", completion: complete1(_:))
-        
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(firstDogSelected))
         firstDog.isUserInteractionEnabled = true
         firstDog.addGestureRecognizer(singleTap)
@@ -52,13 +51,16 @@ class GuessingGameViewController: UIViewController {
         secondDog.addGestureRecognizer(singleTapDog2)
         
     }
+    
+    
 
     
-    private func complete1(_ lol: [Animal]?) {
+    private func complete1(_ lol: [UIImage]?) {
         self.loadingStackView.isHidden = true
         self.startGameButton.isHidden = false
         
-        print(lol![0].id, lol![1].id)
+        firstDog.image = lol![0]
+        secondDog.image = lol![1]
     }
     
 
@@ -72,11 +74,11 @@ class GuessingGameViewController: UIViewController {
     
     
     @objc func firstDogSelected() {
-        dogSelected(dog: 1)
+        animalSelected(animal: 0)
     }
     
     @objc func secondDogSelected() {
-        dogSelected(dog: 2)
+        animalSelected(animal: 1)
     }
     
     // Displays the step after a picture is selected
@@ -84,18 +86,23 @@ class GuessingGameViewController: UIViewController {
     //   else: take them to the next page or give them the option to go to the leaderboard?
     //
     // dog represents the picture number(1 or 2) that the user selected
-    func dogSelected(dog: Int) {
+    func animalSelected(animal: Int) {
         firstDog.isUserInteractionEnabled = false
         secondDog.isUserInteractionEnabled = false
-        if dog == 1 {
+        let animals = DataHandler.currSelectedAnimals()
+        let firstGreater: Bool = animals[0].score > animals[1].score
+        
+        if (animal == 0 && firstGreater) || (animal == 1 && !firstGreater) {
             self.correctGuesses += 1
             self.scoreLabel.text = "Score: \(self.correctGuesses)"
             self.correctGuessStack.isHidden = false
         } else {
             //Incorrect rn...
-//            let InputScoreView = self.storyboard?.instantiateViewController(withIdentifier: "InputScore") as! InputScoreViewController
-//            InputScoreView.score = self.correctGuesses
-//            self.present(InputScoreView, animated: true, completion: nil)
+            //            let InputScoreView = self.storyboard?.instantiateViewController(withIdentifier: "InputScore") as! InputScoreViewController
+            //            InputScoreView.score = self.correctGuesses
+            //            self.present(InputScoreView, animated: true, completion: nil)
+            // should segue to next
+            
         }
     }
     

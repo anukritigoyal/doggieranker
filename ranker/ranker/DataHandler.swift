@@ -9,15 +9,18 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 
 let ref = Database.database().reference()
+let storageRef = Storage.storage().reference()
 var allAnimals: [Animal] = []
+var selectedAnimals: [Animal] = []
 
 class DataHandler {
 
     // Function is currently hardcoded for dogs, will have to implement cats later (based on settings)
     static func getAll(gameType: String, completion: @escaping ([UIImage]?) -> ()) {
-        let catRef = ref.child("Posts/Cat")
+        let catRef = ref.child("Posts/Dog")
         allAnimals = []
         var currCandidates: [Animal]?
         catRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -32,14 +35,15 @@ class DataHandler {
                 print("are we even getting here", key, valueType, valueScore)
                 allAnimals.append(toAddAnimal)
             }
+            selectedAnimals = []
             if gameType == "Ranker" {
                 currCandidates = getTwoRanker()
-                completion(currCandidates)
+//                completion(currCandidates)
             } else if gameType == "Guesser" {
                 currCandidates = getTwoGuesser()
-                completion(currCandidates)
+//                completion(currCandidates)
             }
-            return
+            getPhotos(currCandidates, completion: completion)
             //
         })
 
@@ -47,9 +51,8 @@ class DataHandler {
     
     // Needs to include only two images not already seen
     static func getTwoRanker() -> [Animal]? {
-        let allSeen1 = UserDefaults.standard.object(forKey: "seen")
-        print(allSeen1)
-        var allSeen = allSeen1 as! [String]
+        let allSeenDefaults = UserDefaults.standard.object(forKey: "seen")
+        var allSeen = allSeenDefaults as! [String]
         var unseenAnimals: [Animal] = []
         for animal in allAnimals {
             if !allSeen.contains(animal.id) {
@@ -69,6 +72,8 @@ class DataHandler {
         allSeen.append(unseenAnimals[firstRand].id)
         allSeen.append(unseenAnimals[secondRand].id)
         UserDefaults.standard.set(allSeen, forKey: "seen")
+        selectedAnimals = [unseenAnimals[firstRand], unseenAnimals[secondRand]]
+
         return [unseenAnimals[firstRand], unseenAnimals[secondRand]]
         
     }
@@ -81,31 +86,49 @@ class DataHandler {
             secondRand = Int.random(in: 0..<allAnimals.count)
         }
         print(allAnimals[firstRand].id, allAnimals[secondRand].id)
+        selectedAnimals = [allAnimals[firstRand], allAnimals[secondRand]]
         return [allAnimals[firstRand], allAnimals[secondRand]]
     }
     
     static func getPhotos(_ animals:[Animal]?, completion: @escaping ([UIImage]?) -> ()) {
+//        _ animals:[Animal]?, completion: @escaping ([UIImage]?) -> ()
         // Create a reference to the file you want to download
-        if (animals == nil) {
-            // something, like an alert
-        }
-        let url1 = "\(animals![0].id)"
-        let url2 = "\(animals![1].id)"
-        let islandRef = storageRef.child(url1)
-        
-        // Might make 2 completion handlers.
-        //
-        //
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        islandRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-            } else {
-                // Data for "images/island.jpg" is returned
-                let image = UIImage(data: data!)
+//        if (animals == nil) {
+//            // something, like an alert
+//            return
+//        }
+        let group = DispatchGroup()
+        let url1 = "\(animals![0].id).jpg"
+        let url2 = "\(animals![1].id).jpg"
+        print(animals![0].id, animals![1].id)
+//        let url1 = "Frank.jpg"
+//        let url2 = "Lucy.jpg"
+//        let urls: [String] = [animals![0].id, animals![1].id]
+        let urls: [String] = [url1, url2]
+        var allImages: [UIImage] = []
+        for url in urls {
+            group.enter() // for imageManager
+            let imgRef = storageRef.child(url)
+            imgRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let error = error {
+                    print("ERROR:", error)
+                } else {
+                    let image = UIImage(data: data!)
+                    allImages.append(image!)
+                }
+                group.leave()
             }
         }
+        group.notify(queue: .main) {
+            completion(allImages)
+        }
     }
+    
+    static func currSelectedAnimals() -> [Animal] {
+        return selectedAnimals
+    }
+        
+    
 
     
     static func checkInitial() -> [String] {
