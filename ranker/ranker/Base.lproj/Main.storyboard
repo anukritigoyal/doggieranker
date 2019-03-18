@@ -195,7 +195,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="cWg-cr-Zmc" kind="show" id="xCs-NR-VS7"/>
+                                    <action selector="touchStartButton:" destination="Cur-Cm-9wa" eventType="touchUpInside" id="mGy-Ic-1fZ"/>
                                 </connections>
                             </button>
                         </subviews>
