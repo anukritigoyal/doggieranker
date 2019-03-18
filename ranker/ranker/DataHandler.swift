@@ -97,6 +97,10 @@ class DataHandler {
         //            return
         //        }
         let group = DispatchGroup()
+        if animals == nil {
+            completion(nil)
+            return
+        }
         print(animals![0].id, animals![1].id)
         //        let url1 = "Frank.jpg"
         //        let url2 = "Lucy.jpg"
