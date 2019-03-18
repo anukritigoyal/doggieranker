@@ -175,11 +175,11 @@ class GGViewController: UIViewController {
             DataHandler.addScore()
             thirdText.text = "Score: \(DataHandler.currScore())"
             let animation = CABasicAnimation(keyPath: "position")
-            animation.duration = 0.07
+            animation.duration = 0.15
             animation.repeatCount = 3
             animation.autoreverses = true
-            animation.fromValue = NSValue(cgPoint: CGPoint(x: thirdText.center.x - 10, y: thirdText.center.y))
-            animation.toValue = NSValue(cgPoint: CGPoint(x: thirdText.center.x + 10, y: thirdText.center.y))
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: thirdText.center.x - 20, y: thirdText.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: thirdText.center.x + 20, y: thirdText.center.y))
             thirdText.layer.add(animation, forKey: "position")
             DataHandler.getAll(gameType:"Guesser", completion: reloadComplete(_:))
         } else {

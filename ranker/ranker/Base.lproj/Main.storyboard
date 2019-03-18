@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YyE-df-zza">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,6 +109,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="game" destination="UfW-fv-U52" id="KqO-A2-wfd"/>
                         <outlet property="submit" destination="wTH-dO-7cl" id="QUo-Lc-Sk6"/>
@@ -298,34 +300,34 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-aE-N9i">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="113.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stB-d3-AYs">
-                                        <rect key="frame" x="0.0" y="113.66666666666666" width="375" height="114"/>
+                                        <rect key="frame" x="0.0" y="78" width="375" height="308.66666666666669"/>
                                         <string key="text">Choose the Animal that you believe other users believe is cuter! If you get one wrong, you're out and you'll be able to submit your score of how many you got right!</string>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-gq-NTN">
-                                        <rect key="frame" x="0.0" y="227.66666666666666" width="375" height="113.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="386.66666666666669" width="375" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-JE-NMw">
-                                                <rect key="frame" x="0.0" y="44.666666666666629" width="187.66666666666666" height="24.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="27" width="187.66666666666666" height="24.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-Xp-nFZ">
-                                                <rect key="frame" x="187.66666666666663" y="46.666666666666629" width="187.33333333333337" height="20"/>
+                                                <rect key="frame" x="187.66666666666663" y="29" width="187.33333333333337" height="20"/>
                                             </activityIndicatorView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq5-mM-IjJ">
-                                        <rect key="frame" x="0.0" y="341.33333333333331" width="375" height="196.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="464.66666666666669" width="375" height="134.66666666666669"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
                                         <state key="normal" title="Start Game!"/>
                                         <connections>
@@ -334,7 +336,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwH-X4-yAB">
-                                        <rect key="frame" x="0.0" y="537.66666666666663" width="375" height="196.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="599.33333333333337" width="375" height="134.66666666666663"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                         <state key="normal" title="Leaderboard"/>
                                     </button>
@@ -429,6 +431,57 @@
             </objects>
             <point key="canvasLocation" x="3465" y="123"/>
         </scene>
+        <!--Leaderboard Table View Controller-->
+        <scene sceneID="kSJ-Am-I4z">
+            <objects>
+                <tableViewController id="CyN-2H-GpI" customClass="LeaderboardTableViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="den-8C-vwF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="0KB-Sn-Ybt" detailTextLabel="Oph-pm-1Ff" style="IBUITableViewCellStyleSubtitle" id="tvv-kH-gSW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tvv-kH-gSW" id="ocB-5E-gIZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0KB-Sn-Ybt">
+                                            <rect key="frame" x="16.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oph-pm-1Ff">
+                                            <rect key="frame" x="15.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CyN-2H-GpI" id="40B-3j-ycm"/>
+                            <outlet property="delegate" destination="CyN-2H-GpI" id="ch6-Nl-5US"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="as4-ya-YFe"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tbView" destination="den-8C-vwF" id="lL6-rm-oVu"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="leaderboardToHome" id="5NI-mP-g2V"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pj3-FR-EMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="1918.9655172413793"/>
+        </scene>
         <!--Submit View Controller-->
         <scene sceneID="6PO-AB-OsA">
             <objects>
@@ -449,28 +502,28 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, you missed one!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-b6-joy">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit your score online to see how you stack up to others! View other scores once you're done!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sd-sM-3kF">
-                                        <rect key="frame" x="0.0" y="87" width="375" height="87.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="70.666666666666671" width="375" height="209.66666666666663"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-cQ-ThH">
-                                        <rect key="frame" x="0.0" y="174.33333333333334" width="375" height="127.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="280.33333333333331" width="375" height="103.66666666666669"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U7D-66-OhA">
-                                        <rect key="frame" x="0.0" y="302" width="375" height="281.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="384" width="375" height="228"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-7w-FYS">
-                                                <rect key="frame" x="0.0" y="101.33333333333331" width="280" height="78.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="74.666666666666686" width="280" height="78.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit a three letter tag!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDK-pj-LzW">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="24.333333333333332"/>
@@ -479,13 +532,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxm-O5-gqQ">
-                                                        <rect key="frame" x="0.0" y="24.333333333333371" width="280" height="30"/>
+                                                        <rect key="frame" x="0.0" y="24.333333333333314" width="280" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a Valid Tag!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-Rr-jbZ">
-                                                        <rect key="frame" x="0.0" y="54.333333333333378" width="280" height="24.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="54.333333333333321" width="280" height="24.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <color key="textColor" red="1" green="0.0" blue="0.084393614217168178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -493,7 +546,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWs-hv-5fv" userLabel="SubmitButton">
-                                                <rect key="frame" x="280" y="119.66666666666669" width="95" height="42"/>
+                                                <rect key="frame" x="280" y="93" width="95" height="42"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
                                                 <state key="normal" title="Submit"/>
                                                 <connections>
@@ -503,7 +556,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTy-ad-Oew">
-                                        <rect key="frame" x="0.0" y="583.66666666666663" width="375" height="150.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="612" width="375" height="122"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                         <state key="normal" title="Leaderboard"/>
                                         <connections>
@@ -528,11 +581,30 @@
                         <outlet property="scoreLabel" destination="7JB-cQ-ThH" id="LU3-La-TAx"/>
                         <outlet property="textInput" destination="vxm-O5-gqQ" id="jEE-6V-8bw"/>
                         <outlet property="validTag" destination="2WU-Rr-jbZ" id="Z1O-kK-DCJ"/>
+                        <segue destination="YyE-df-zza" kind="show" identifier="toLeaderboard" id="Iie-sD-5Xr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DxH-Gs-Vdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="1919"/>
+            <point key="canvasLocation" x="2626.4000000000001" y="1918.9655172413793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dwn-Ac-Au2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YyE-df-zza" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="TqV-zT-2PR">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CyN-2H-GpI" kind="relationship" relationship="rootViewController" id="pFn-yG-iUq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97G-6H-nhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="1918.9655172413793"/>
         </scene>
     </scenes>
     <resources>
@@ -543,6 +615,7 @@
         <image name="submit" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ULJ-cq-wcp"/>
+        <segue reference="5NI-mP-g2V"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
