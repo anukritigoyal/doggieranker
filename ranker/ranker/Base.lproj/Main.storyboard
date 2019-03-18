@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82s-tO-qn5">
-                                <rect key="frame" x="112" y="181" width="176" height="75"/>
+                                <rect key="frame" x="112" y="181" width="201" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank" translatesAutoresizingMaskIntoConstraints="NO" id="zej-zm-NSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waP-EG-cfb">
-                                        <rect key="frame" x="75" y="0.0" width="101" height="75"/>
+                                        <rect key="frame" x="100" y="0.0" width="101" height="100"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Doggie Ranker"/>
                                         <connections>
@@ -36,14 +36,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-WE-SRH">
-                                <rect key="frame" x="116" y="364" width="168" height="75"/>
+                                <rect key="frame" x="116" y="364" width="193" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="submit" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-xt-F9v">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTH-dO-7cl">
-                                        <rect key="frame" x="75" y="0.0" width="93" height="75"/>
+                                        <rect key="frame" x="100" y="0.0" width="93" height="100"/>
                                         <state key="normal" title="Submit Photo"/>
                                         <connections>
                                             <segue destination="AYs-OA-f8x" kind="show" id="B09-dZ-HUS"/>
@@ -56,20 +56,20 @@
                                 <items>
                                     <barButtonItem title="Settings" id="Avl-nd-mld">
                                         <connections>
-                                            <segue destination="eZD-1C-5Qp" kind="show" id="gGC-Ps-x6m"/>
+                                            <segue destination="aDa-Nm-C4i" kind="show" id="lNg-Af-tRX"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5M-oD-R8A">
-                                <rect key="frame" x="108" y="272" width="183" height="75"/>
+                                <rect key="frame" x="108" y="272" width="208" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-du-WgK">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-fv-U52">
-                                        <rect key="frame" x="75" y="0.0" width="108" height="75"/>
+                                        <rect key="frame" x="100" y="0.0" width="108" height="100"/>
                                         <state key="normal" title="Guessing Game"/>
                                         <connections>
                                             <segue destination="BqY-nX-fsJ" kind="show" id="aft-XP-AYE"/>
@@ -121,6 +121,37 @@
             </objects>
             <point key="canvasLocation" x="794" y="987"/>
         </scene>
+        <!--Leaderboard Table View Controller-->
+        <scene sceneID="vfH-Xd-hMZ">
+            <objects>
+                <tableViewController id="aDa-Nm-C4i" customClass="LeaderboardTableViewController" customModule="ranker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nBu-lf-Euc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LbS-7t-Df6">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LbS-7t-Df6" id="lW7-Yt-GiI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aDa-Nm-C4i" id="tpl-eB-lVU"/>
+                            <outlet property="delegate" destination="aDa-Nm-C4i" id="SI2-NZ-Bk0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="s" destination="nBu-lf-Euc" id="QfL-aC-pit"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgJ-R8-heS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30585" y="1034"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ehm-jq-o5D">
             <objects>
@@ -168,8 +199,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="game" width="75" height="75"/>
-        <image name="rank" width="75" height="75"/>
-        <image name="submit" width="75" height="75"/>
+        <image name="game" width="100" height="100"/>
+        <image name="rank" width="100" height="100"/>
+        <image name="submit" width="100" height="100"/>
     </resources>
 </document>
