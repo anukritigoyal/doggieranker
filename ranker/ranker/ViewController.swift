@@ -14,10 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var game: UIButton!
     @IBOutlet weak var submit: UIButton!
     
+    @IBOutlet weak var rank: UIView!
+    @IBOutlet weak var guess: UIView!
+    @IBOutlet weak var sub: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let emptyStringArr: [String] = []
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
+        rank.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
+        guess.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
+        sub.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
+        
         let domain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: domain)
         UserDefaults.standard.synchronize()
