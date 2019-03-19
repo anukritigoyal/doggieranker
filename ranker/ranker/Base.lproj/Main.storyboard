@@ -398,6 +398,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="28.333333333333332"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                         <state key="normal" title="  Back to Home"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ThE-Vm-8HX"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Animal!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cti-mx-UDG">
                                         <rect key="frame" x="0.0" y="28.333333333333329" width="375" height="23.333333333333329"/>
@@ -551,6 +554,7 @@
                     </view>
                     <connections>
                         <segue destination="yuH-kv-7H5" kind="show" identifier="toSubmit" id="ceU-0u-e9I"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ggBackToHome" id="4oY-mE-SMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6P-zj-Y4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -568,8 +572,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sph-Ty-APd">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDS-3K-KAx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDS-3K-KAx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44.333333333333336"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                         <state key="normal" title="  Back to Home">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -579,13 +583,13 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-o6-Ild">
-                                        <rect key="frame" x="0.0" y="50.999999999999972" width="375" height="508.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="44.333333333333314" width="375" height="537.33333333333348"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="JV9-DT-6za">
-                                        <rect key="frame" x="0.0" y="559.33333333333337" width="375" height="174.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="581.66666666666663" width="375" height="152.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6z-Hj-2Zb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Import a Photo!">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -595,13 +599,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an image of a:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KT-VJ-Ulp">
-                                                <rect key="frame" x="0.0" y="49.666666666666629" width="375" height="41.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="43.333333333333371" width="375" height="36"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3ob-hg-jdb">
-                                                <rect key="frame" x="0.0" y="91" width="375" height="35"/>
+                                                <rect key="frame" x="0.0" y="79.333333333333371" width="375" height="30.666666666666671"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <segments>
                                                     <segment title="Dog"/>
@@ -612,7 +616,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-qM-O5n">
-                                                <rect key="frame" x="0.0" y="125.00000000000001" width="375" height="49.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="108.99999999999999" width="375" height="43.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -708,13 +712,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="E7T-Zh-Anm">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9J-2u-Cv3">
+                                    <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9J-2u-Cv3" userLabel="Back to Home">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="96.333333333333329"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="13"/>
                                         <state key="normal" title="  Back to Home"/>
                                         <connections>
-                                            <action selector="backButtonTouch:" destination="yuH-kv-7H5" eventType="touchUpInside" id="mCg-M2-gwI"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="toHome" id="dvA-ZL-pfY"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="8nD-U4-e3M"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, you missed one!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-b6-joy">
@@ -831,7 +834,7 @@
         <image name="submit" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dvA-ZL-pfY"/>
+        <segue reference="ThE-Vm-8HX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

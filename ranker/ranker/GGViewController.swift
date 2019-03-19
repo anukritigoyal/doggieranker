@@ -12,13 +12,24 @@ class GGViewController: UIViewController {
         view.addSubview(secondView)
         firstView.addSubview(firstImage)
         secondView.addSubview(secondImage)
-        view.addSubview(backButton)
+//        view.addSubview(backButton)
         view.addSubview(thirdView)
         thirdView.addSubview(thirdText)
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
         setupMain()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.left {
+                performSegue(withIdentifier: "ggBackToHome", sender: self)
+            }
+        }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -79,20 +90,20 @@ class GGViewController: UIViewController {
         return img
     }()
     
-    let backButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Back", for:.normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 20.0)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return button
-    }()
+//    let backButton: UIButton = {
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitle("Back", for:.normal)
+//        button.setTitleColor(.white, for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 20.0)
+//        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//        return button
+//    }()
   
-    @objc func buttonAction() {
-        performSegue(withIdentifier: "ggBackToHome", sender: self)
-    }
-    
+//    @objc func buttonAction() {
+//        performSegue(withIdentifier: "ggBackToHome", sender: self)
+//    }
+   
     
     private func setupMain() {
         view.addSubview(firstView)
@@ -137,8 +148,8 @@ class GGViewController: UIViewController {
         secondImage.centerXAnchor.constraint(equalTo: secondView.centerXAnchor).isActive = true
         secondImage.centerYAnchor.constraint(equalTo: secondView.centerYAnchor, constant: 25).isActive = true
         
-        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 45).isActive = true
-        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
+//        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 45).isActive = true
+//        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
         
         thirdText.centerXAnchor.constraint(equalTo: thirdView.centerXAnchor).isActive = true
         thirdText.centerYAnchor.constraint(equalTo: thirdView.centerYAnchor, constant: 10).isActive = true

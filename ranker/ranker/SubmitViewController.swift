@@ -23,9 +23,9 @@ class SubmitViewController: UIViewController {
     @IBOutlet weak var validTag: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var textInput: UITextField!
-    @IBAction func backButtonTouch(_ sender: Any) {
-        performSegue(withIdentifier: "toHome", sender: self)
-    }
+//    @IBAction func backButtonTouch(_ sender: Any) {
+//        performSegue(withIdentifier: "toHome", sender: self)
+//    }
     @IBAction func submitButtonTouch(_ sender: Any) {
         guard let txt = textInput.text else {
             validTag.textColor = .red

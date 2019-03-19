@@ -14,10 +14,21 @@ class RankerViewController: UIViewController {
         view.addSubview(secondView)
         firstView.addSubview(firstImage)
         secondView.addSubview(secondImage)
-        view.addSubview(backButton)
+//        view.addSubview(backButton)
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
         setupMain()
         
     }
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.left {
+                performSegue(withIdentifier: "rankerToHome", sender: self)
+            }
+        }
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
@@ -62,20 +73,20 @@ class RankerViewController: UIViewController {
         return img
     }()
     
-    let backButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Back to Home", for:.normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Chalkboard SE", size:20.0)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return button
-    }()
+//    let backButton: UIButton = {
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitle("Back to Home", for:.normal)
+//        button.setTitleColor(.white, for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Chalkboard SE", size:20.0)
+//        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//        return button
+//    }()
     //    let singleTap = UITapGestureRecognizer(target: self, action: #selector(selected0))
     //    let singleTap2 = UITapGestureRecognizer(target: self, action: #selector(selected1))
-    @objc func buttonAction() {
-        performSegue(withIdentifier: "rankerToHome", sender: self)
-    }
+//    @objc func buttonAction() {
+//        performSegue(withIdentifier: "rankerToHome", sender: self)
+//    }
     
     
     private func setupMain() {
@@ -110,8 +121,8 @@ class RankerViewController: UIViewController {
         secondImage.centerXAnchor.constraint(equalTo: secondView.centerXAnchor).isActive = true
         secondImage.centerYAnchor.constraint(equalTo: secondView.centerYAnchor).isActive = true
         
-        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 45).isActive = true
-        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
+//        backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 45).isActive = true
+//        backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
         
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(selected0))
         let singleTap2 = UITapGestureRecognizer(target: self, action: #selector(selected1))
