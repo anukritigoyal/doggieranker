@@ -29,9 +29,11 @@ class SubmitViewController: UIViewController {
     @IBAction func submitButtonTouch(_ sender: Any) {
         guard let txt = textInput.text else {
             validTag.textColor = .red
+            validTag.isHidden = false
             return
         }
         if txt.count != 3 {
+            validTag.textColor = .red
             validTag.isHidden = false
             return
         }

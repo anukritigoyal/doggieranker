@@ -143,7 +143,7 @@ class RankerViewController: UIViewController {
         let ref = Database.database().reference()
         let animalSelected = animals[selected]
         let increaseScore = animalSelected.score + 1
-        ref.child("Posts/Dog/\(animalSelected.id)/score").setValue(increaseScore)
+        ref.child("Posts/\(DataHandler.getAnimal())/\(animalSelected.id)/score").setValue(increaseScore)
         DataHandler.getAll(gameType: "Ranker", completion: reloadComplete)
     }
     

@@ -16,12 +16,12 @@ var allAnimals: [Animal] = []
 var selectedAnimals: [Animal] = []
 var allImages: [UIImage] = []
 var score: Int = 0
-
+var settingsAnimal = "Dog"
 class DataHandler {
     
     // Function is currently hardcoded for dogs, will have to implement cats later (based on settings)
     static func getAll(gameType: String, completion: @escaping ([UIImage]?) -> ()) {
-        let catRef = ref.child("Posts/Dog")
+        let catRef = ref.child("Posts/\(settingsAnimal)")
         allAnimals = []
         var currCandidates: [Animal]?
         catRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -30,7 +30,7 @@ class DataHandler {
                 let key = snap.key
                 let value = snap.value as! [String:Any]
                 // valueType should be set to whatever it's set in settings, not hardcoded
-                let valueType = "Dog"
+                let valueType = settingsAnimal
                 let valueScore = value["score"] as! Int
                 let toAddAnimal = Animal(id: key, type: valueType, score: valueScore)
                 print("are we even getting here", key, valueType, valueScore)
@@ -146,6 +146,14 @@ class DataHandler {
     
     static func currScore() -> Int {
         return score
+    }
+    
+    static func setAnimal(_ newAnimal: String) {
+        settingsAnimal = newAnimal
+    }
+    
+    static func getAnimal() -> String {
+        return settingsAnimal
     }
     
     
