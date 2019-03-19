@@ -15,15 +15,15 @@ class RankerViewController: UIViewController {
         firstView.addSubview(firstImage)
         secondView.addSubview(secondImage)
 //        view.addSubview(backButton)
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(swipeRight)
         setupMain()
         
     }
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.left {
+            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.right {
                 performSegue(withIdentifier: "rankerToHome", sender: self)
             }
         }

@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var doggieRankStack: UIStackView!
     @IBOutlet weak var ggStack: UIStackView!
     @IBOutlet weak var submitStack: UIStackView!
+    
+    @IBOutlet weak var settingsStack: UIStackView!
     @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
@@ -22,9 +24,14 @@ class ViewController: UIViewController {
         let doggieRankerTap = UITapGestureRecognizer(target: self, action: #selector(self.showDoggieRanker))
         let guessingGameTap = UITapGestureRecognizer(target: self, action: #selector(self.showGuessingGame))
         let submitButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.showSubmitPhoto))
+        let settingsTap = UITapGestureRecognizer(target: self, action: #selector(self.showSettings))
         doggieRankStack.addGestureRecognizer(doggieRankerTap)
         ggStack.addGestureRecognizer(guessingGameTap)
         submitStack.addGestureRecognizer(submitButtonTap)
+        
+        settingsStack.addGestureRecognizer(settingsTap)
+        
+        settingsStack.isUserInteractionEnabled = true
         doggieRankStack.isUserInteractionEnabled = true
         ggStack.isUserInteractionEnabled = true
         submitStack.isUserInteractionEnabled = true
@@ -65,6 +72,10 @@ class ViewController: UIViewController {
     
     @objc func showSubmitPhoto() {
         performSegue(withIdentifier: "homeToSubmit", sender: self)
+    }
+    
+    @objc func showSettings() {
+        performSegue(withIdentifier: "homeToSettings", sender: self)
     }
     
 

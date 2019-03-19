@@ -15,9 +15,9 @@ class GGViewController: UIViewController {
 //        view.addSubview(backButton)
         view.addSubview(thirdView)
         thirdView.addSubview(thirdText)
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(swipeRight)
         setupMain()
         
         
@@ -26,7 +26,7 @@ class GGViewController: UIViewController {
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.left {
+            if swipeGesture.direction == UISwipeGestureRecognizer.Direction.right {
                 performSegue(withIdentifier: "ggBackToHome", sender: self)
             }
         }

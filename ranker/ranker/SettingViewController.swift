@@ -13,17 +13,23 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
-        catStock.imageView?.alpha = 0.6
         catStock.imageView!.layer.cornerRadius = 35
         dogStock.imageView!.layer.cornerRadius = 35
         catStock.imageView!.layer.masksToBounds = true
         dogStock.imageView!.layer.masksToBounds = true
+        catStock.imageView?.alpha = 0.6
+
 
 
 
 
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        catStock.imageView?.alpha = 0.6
     }
     @IBOutlet weak var currentSelection: UILabel!
     
