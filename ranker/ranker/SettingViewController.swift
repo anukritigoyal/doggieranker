@@ -17,9 +17,6 @@ class SettingViewController: UIViewController {
         dogStock.imageView!.layer.cornerRadius = 35
         catStock.imageView!.layer.masksToBounds = true
         dogStock.imageView!.layer.masksToBounds = true
-        catStock.imageView?.alpha = 0.6
-
-
 
 
 
