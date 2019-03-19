@@ -18,7 +18,7 @@ class GuessingGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
-        backButton.setTitle("Back to Home", for: .normal)
+        backButton.setTitle("  Back to Home", for: .normal)
         backButton.setTitleColor(.white, for: .normal)
         startGameButton.setTitleColor(.white, for: .normal)
         startGameButton.isHidden = true
