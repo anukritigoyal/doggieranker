@@ -18,7 +18,12 @@ class DoggieRankerStartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         start.backgroundColor = UIColor.darkGray
-        start.setTitle("Loading...", for: .normal)
+        start.setTitle("Loading.", for: .normal)
+        start.titleLabel?.adjustsFontSizeToFitWidth = true
+        start.layer.cornerRadius = 25
+        start.layer.masksToBounds = true
+        start.layer.borderColor = UIColor.white.cgColor
+        start.layer.borderWidth = 2
         DataHandler.getAll(gameType: "Ranker", completion: complete)
         start.isUserInteractionEnabled = false
     }

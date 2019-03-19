@@ -53,6 +53,9 @@ class SubmitPhotoViewController: UIViewController, UINavigationControllerDelegat
         let storageRef = Storage.storage().reference()
         let imgString = "\(val).jpg"
         let imageRef = storageRef.child(imgString)
+        if inputImage.image == nil {
+            return
+        }
         if let uploadData = inputImage.image!.pngData() {
             imageRef.putData(uploadData,metadata:nil, completion: nil)
         }

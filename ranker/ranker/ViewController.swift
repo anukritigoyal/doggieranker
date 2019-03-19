@@ -10,21 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var ranker: UIButton!
-    @IBOutlet weak var game: UIButton!
-    @IBOutlet weak var submit: UIButton!
-    
-    @IBOutlet weak var rank: UIView!
-    @IBOutlet weak var guess: UIView!
-    @IBOutlet weak var sub: UIView!
+    @IBOutlet weak var doggieRankStack: UIStackView!
+    @IBOutlet weak var ggStack: UIStackView!
+    @IBOutlet weak var submitStack: UIStackView!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let emptyStringArr: [String] = []
+        //let emptyStringArr: [String] = []
         self.view.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
-        rank.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
-        guess.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
-        sub.backgroundColor = UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1)
+        let doggieRankerTap = UITapGestureRecognizer(target: self, action: #selector(self.showDoggieRanker))
+        let guessingGameTap = UITapGestureRecognizer(target: self, action: #selector(self.showGuessingGame))
+        let submitButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.showSubmitPhoto))
+        doggieRankStack.addGestureRecognizer(doggieRankerTap)
+        ggStack.addGestureRecognizer(guessingGameTap)
+        submitStack.addGestureRecognizer(submitButtonTap)
+        doggieRankStack.isUserInteractionEnabled = true
+        ggStack.isUserInteractionEnabled = true
+        submitStack.isUserInteractionEnabled = true
+//        settingsButton.trailingAnchor.constraint(equalTo: settingsButton.parent, constant: <#T##CGFloat#>)
         
         let domain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: domain)
@@ -38,7 +42,31 @@ class ViewController: UIViewController {
         DataHandler.checkInitial()
         
     }
-
+    
+    @IBAction func doggieRankButton(_ sender: UIButton) {
+        showDoggieRanker()
+    }
+    
+    @IBAction func ggbutton(_ sender: UIButton) {
+        showGuessingGame()
+    }
+    
+    @IBAction func submitbutton(_ sender: Any) {
+        showSubmitPhoto()
+    }
+    
+    @objc func showDoggieRanker() {
+        performSegue(withIdentifier: "homeToRanker", sender: self)
+    }
+    
+    @objc func showGuessingGame() {
+        performSegue(withIdentifier: "homeToGG", sender: self)
+    }
+    
+    @objc func showSubmitPhoto() {
+        performSegue(withIdentifier: "homeToSubmit", sender: self)
+    }
+    
 
 }
 
